@@ -1,4 +1,0 @@
-nprirgen.egg-info/PKG-INFO
-nprirgen.egg-info/SOURCES.txt
-nprirgen.egg-info/dependency_links.txt
-nprirgen.egg-info/top_level.txt

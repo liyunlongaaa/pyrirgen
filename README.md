@@ -1,23 +1,8 @@
-# RIR-Generator
-
-The image method, proposed by Allen and Berkley in 1979 [1], is probably one of the most frequently used methods in the acoustic signal processing community to create synthetic room impulse responses. 
-
-This repository includes both Cython and NumPy implementations of the image method along with a tutorial written by Dr. Emanuel A. P. Habets. (The NumPy version is 20-30x slower than the Cython verion. This was written for my personal learning purposes.)
-
-This repository was forked from https://github.com/Marvin182/rir-generator. For more information, visit the original repository. 
-
-1. J.B. Allen and D.A. Berkley, "Image method for efficiently simulating small-room acoustics," Journal Acoustic Society of America, 65(4), April 1979, p 943.
-
-
-Installing pyrirgen (Cython version) on Windows
+Install steps
 -------------
-- Python 3.5: pip install .\pyrirgen-py35-win_amd64\pyrirgen-0.0.0-cp35-cp35m-win_amd64.whl
-- Python 3.6: pip install .\pyrirgen-py36-win_amd64\pyrirgen-0.0.0-cp36-cp36m-win_amd64.whl
+1. Run `make` to create the dynamic library
+2. Make sure you installed NumPy and Cython (`pip install numpy Cython`)
+3. Run `python3 setup.py install` (Python 2 might work as well, but I never tested for it.)
+4. Currently the setup.py fails to copy the dynamic library to a place where Python can find it. As a workaround you can add the python folder to your library path. On OS X this is done by appending it to the `DYLD_FALLBACK_LIBRARY_PATH` environment variable.
 
-
-
-
-Installing nprirgen (NumPy version)
--------------
-pip install -e ./nprirgen
-
+The module is just a prototype...
